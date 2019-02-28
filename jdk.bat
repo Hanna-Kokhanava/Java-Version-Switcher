@@ -37,7 +37,10 @@ echo ----------------------------
 
 echo Setting JAVA_HOME
 set JAVA_HOME="C:\Program Files\Java\%JAVA_VERSION%"
-setx JAVA_HOME "C:\Program Files\Java\%JAVA_VERSION%"
+setx JAVA_HOME "C:\Program Files\Java\%JAVA_VERSION%" /m
+
+set PATH=%JAVA_HOME%\bin;%PATH%
+setx PATH "%PATH%;%JAVA_HOME%\\bin" /m
 
 echo Display current java version
 java -version
